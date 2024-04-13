@@ -39,3 +39,13 @@ class CreateCircle(Scene):
             Text("4", font_size=20).move_to(
                 hidden_layer_circles[2].get_center())
         )
+
+        # Create hidden layer title
+        hidden_title = Text("Hidden Layer", font_size=20).move_to(
+            UP * 3).shift(RIGHT * 2)
+
+        # Add hidden layer elements to the scene
+        self.add(hidden_layer_circles, hidden_layer_labels, hidden_title)
+
+        # Create connections between input and hidden layers
+        connections = VGroup()
