@@ -49,3 +49,12 @@ class CreateCircle(Scene):
 
         # Create connections between input and hidden layers
         connections = VGroup()
+        
+        for input_circle in input_layer_circles:
+            for hidden_circle in hidden_layer_circles:
+                connection = Line(input_circle.get_right(),
+                                  hidden_circle.get_left(), buff=0, color=GRAY)
+                connections.add(connection)
+
+        # Add connections to the scene
+        self.play(Create(connections), run_time=4)
