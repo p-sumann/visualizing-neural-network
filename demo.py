@@ -81,4 +81,42 @@ class CreateCircle(Scene):
         self.add(output_layer, output_title)
         
         # make connections for all
+        # for first layer to second layer
+        connections1 = VGroup()
+        colors = [RED, GREEN, BLUE]
+        thicknesses = [0.8, 1.6, 2.4, 3]
+        text_objects = []
+        for i, input_circle in enumerate(input_layer_circles):
+            for j, hidden_circle in enumerate(hidden_layer_circles_1):
+                color = random.choice(colors)
+                thickness = random.choice(thicknesses)
+                line = Line(input_circle.get_right(), hidden_circle.get_left(),
+                            buff=0, color=color,
+                            stroke_width=thickness)
+                connections1.add(line)
+                if i == 2:
+                    text = Text(f"{round(random.random(),2)}", font_size=20).move_to(
+                        hidden_circle.get_center())
+                    connections1.add(text)
+                    
+        # for second to third layer
+        connections2 = VGroup()
+        colors = [RED, GREEN, BLUE]
+        thicknesses = [1, 1.6, 2.4, 3]
+        for i, input_circle in enumerate(hidden_layer_circles_1):
+            for j, hidden_circle in enumerate(hidden_layer_circles_2):
+                color = random.choice(colors)
+                thickness = random.choice(thicknesses)
+                line = Line(input_circle.get_right(), hidden_circle.get_left(),
+                            buff=0, color=color,
+                            stroke_width=thickness)
+
+                connections2.add(line)
+                if i == 1:
+                    text = Text(f"{round(random.random(),2)}", font_size=20).move_to(
+                        hidden_circle.get_center())
+                    connections2.add(text)
         
+        # for third to fourth layer
+
+
