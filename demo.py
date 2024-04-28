@@ -56,3 +56,29 @@ class CreateCircle(Scene):
         self.add(hidden_layer_circles_2, hidden_title_2)
         
         
+        # Create 3rd hidden layer circles
+        hidden_layer_circles_3 = VGroup(
+            Circle(radius=0.5, color=WHITE),
+            Circle(radius=0.5, color=WHITE),
+            Circle(radius=0.5, color=WHITE),
+        ).arrange(DOWN, buff=0.4).shift(RIGHT*2)
+
+        hidden_title_3 = Text("Hidden Layer", font_size=15).move_to(
+            UP * 3.7).shift(2*RIGHT)
+        
+        self.add(hidden_layer_circles_3, hidden_title_3)
+
+        # Create output layer circles
+        output_layer = VGroup(
+            Circle(radius=0.5, color=WHITE),
+            Circle(radius=0.5, color=WHITE),
+        ).arrange(DOWN, buff=0.4).shift(RIGHT*4)
+        
+        output_title = Text("Output Layer", font_size=15).move_to(
+            UP * 3.7).shift(4*RIGHT)
+
+        # Add input layer elements to the scene
+        self.add(output_layer, output_title)
+        
+        # make connections for all
+        
