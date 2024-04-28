@@ -12,7 +12,7 @@ class CreateCircle(Scene):
             Circle(radius=0.5, color=WHITE),
         ).arrange(DOWN, buff=0.4).shift(LEFT*4)
         
-         # Create input layer labels
+        # Create input layer labels
         input_layer_labels = VGroup(
             Text(f"{round(random.random(),2)}", font_size=20).move_to(
                 input_layer_circles[0].get_center()),
@@ -39,10 +39,7 @@ class CreateCircle(Scene):
         ).arrange(DOWN, buff=0.4).shift(2 * RIGHT).shift(LEFT*4)
 
         # Create 1st hidden layer title
-        hidden_title_1 = Text("Hidden Layer", font_size=15).move_to(
-            UP * 3.7)
-        # Add hidden layer elements to the scene
-        # self.add(hidden_layer_circles_1, hidden_layer_labels_1, hidden_title_1)
+        hidden_title_1 = Text("Hidden Layer", font_size=15).move_to(UP * 3.7)
         self.add(hidden_layer_circles_1, hidden_title_1)
 
         # Create hidden 2 layer circles
@@ -53,3 +50,9 @@ class CreateCircle(Scene):
             Circle(radius=0.5, color=WHITE),
             Circle(radius=0.5, color=WHITE),
         ).arrange(DOWN, buff=0.4).shift(4 * RIGHT).shift(LEFT*4)
+
+        # Create hidden layer title
+        hidden_title_2 = Text("Hidden Layer", font_size=15).move_to(UP * 3.7).shift(LEFT*2)
+        self.add(hidden_layer_circles_2, hidden_title_2)
+        
+        
