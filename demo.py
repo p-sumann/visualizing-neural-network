@@ -156,4 +156,9 @@ class CreateCircle(Scene):
             output_layer[1].get_center())
         connections4.add(text1, text2)
 
-
+        # Add connections to the scene
+        self.play(Create(connections1), run_time=2)
+        self.play(Create(connections2), run_time=2)
+        self.play(Create(connections3), run_time=2)
+        self.play(Create(connections4), run_time=2)
+        self.wait(1)
