@@ -53,24 +53,6 @@ class BackwardProp(Scene):
         self.add(input_layer_circles_5.shift(RIGHT*4))
 
 
-        
-
-    # # Create input layer title
-    #     input_title = Text("Input Layer", font_size=20).move_to(UP * 3)
-    #     self.add(input_layer_circles, input_title)
-
-    #     # Create hidden layer circles
-        
-    #     hidden_layer_circles = VGroup(
-    #         Circle(radius=0.2, color=RED),
-    #         Circle(radius=0.2, color=RED),
-    #         Circle(radius=0.2, color=RED),
-    #         Circle(radius=0.2, color=RED),
-    #         Circle(radius=0.2, color=RED),
-    #         Circle(radius=0.2, color=RED),
-    #         Circle(radius=0.2, color=RED),
-    #     ).arrange(DOWN, buff=0.2).shift(2 * RIGHT)
-
 
     #     # Create hidden layer title
     #     hidden_title = Text("Hidden Layer", font_size=20).move_to(
