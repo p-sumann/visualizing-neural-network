@@ -11,7 +11,7 @@ class BackwardProp(Scene):
             input_layer_circles_1.add(Circle(radius=0.15, color=GREY))
 
             input_layer_circles_1.arrange(DOWN, buff=0.15)
-        
+            
         self.add(input_layer_circles_1.shift(LEFT*4))
         
         input_layer_circles_2 = VGroup()
@@ -54,35 +54,35 @@ class BackwardProp(Scene):
 
 
 
-    #     # Create hidden layer title
-    #     hidden_title = Text("Hidden Layer", font_size=20).move_to(
-    #         UP * 3).shift(RIGHT * 2)
+        # Create hidden layer title
+        # hidden_title = Text("Hidden Layer", font_size=20).move_to(
+        #     UP * 3).shift(RIGHT * 2)
 
-    #     # Add hidden layer elements to the scene
-    #     # self.add(hidden_layer_circles, hidden_layer_labels, hidden_title)
-    #     self.add(hidden_layer_circles, hidden_title)
+        # # Add hidden layer elements to the scene
+        # # self.add(hidden_layer_circles, hidden_layer_labels, hidden_title)
+        # self.add(hidden_layer_circles, hidden_title)
 
-    #     # Create connections between input and hidden layers
-    #     connections = VGroup()
+        # Create connections between input and hidden layers
+        # connections = VGroup()
         
-    #     for input_circle in input_layer_circles:
+        # for input_circle in input_layer_circles:
             
-    #         for hidden_circle in hidden_layer_circles:
+        #     for hidden_circle in hidden_layer_circles:
                 
-    #             connection = Line(input_circle.get_right(),
-    #                               hidden_circle.get_left(), buff=0, color=GRAY)
-    #             connections.add(connection)
+        #         connection = Line(input_circle.get_right(),
+        #                           hidden_circle.get_left(), buff=0, color=GRAY)
+        #         connections.add(connection)
 
-    #     # Backward prop
+        # # Backward prop
         
-    #     connections1 = VGroup()
-    #     for hidden_circle in hidden_layer_circles:
+        # connections1 = VGroup()
+        # for hidden_circle in hidden_layer_circles:
             
-    #         for input_circle in input_layer_circles:
+        #     for input_circle in input_layer_circles:
                 
-    #             connection_1 = Line(hidden_circle.get_left(),
-    #                               input_circle.get_right(),buff=0, color=ORANGE)
-    #             connections1.add(connection_1)
+        #         connection_1 = Line(hidden_circle.get_left(),
+        #                           input_circle.get_right(),buff=0, color=ORANGE)
+        #         connections1.add(connection_1)
         connections_1 = VGroup()
         colors = [RED, GREEN, BLUE]
         thicknesses = [1, 1.6, 2.4, 3]
@@ -93,6 +93,10 @@ class BackwardProp(Scene):
                 line = Line(input_circle.get_right(), hidden_circle.get_left(),
                             buff=0, color=GRAY,
                             stroke_width=thickness)
+                if i == 2:
+                    text = Text(f"{round(random.random(),2)}", font_size=20).move_to(
+                        hidden_circle.get_center())
+                    connections_1.add(text)
 
                 connections_1.add(line)
         
@@ -149,15 +153,16 @@ class BackwardProp(Scene):
                 backward_prop_1.add(connection_1)
                 
         backward_prop_2 = VGroup()
-        for hidden_circle in input_layer_circles_4:
+        for i, hidden_circle in enumerate(input_layer_circles_4):
             for input_circle in input_layer_circles_3:
                 colors = [RED, GREEN, BLUE, ORANGE]
-                thicknesses = [1, 1.6, 1.8, 0.7]
+                thicknesses = [1, 1.2, 1.4 0.7]
                 color = random.choice(colors)
                 thickness = random.choice(thicknesses)
                 connection_1 = Line(hidden_circle.get_left(),
                                   input_circle.get_right(),buff=0, color=color,stroke_width=thickness)
                 backward_prop_2.add(connection_1)
+                
                 
 
         
