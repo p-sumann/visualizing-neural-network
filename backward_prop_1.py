@@ -1,11 +1,14 @@
 from manim import * 
 import random
+
+config.background_color = WHITE
+
 class BackwardProp(Scene):
     def construct(self):
         input_layer_circles_1 = VGroup()
 
         for _ in range(16):
-            input_layer_circles_1.add(Circle(radius=0.15, color=WHITE))
+            input_layer_circles_1.add(Circle(radius=0.15, color=GREY))
 
             input_layer_circles_1.arrange(DOWN, buff=0.15)
         
@@ -14,7 +17,7 @@ class BackwardProp(Scene):
         input_layer_circles_2 = VGroup()
 
         for _ in range(12):
-            input_layer_circles_2.add(Circle(radius=0.15, color=WHITE))
+            input_layer_circles_2.add(Circle(radius=0.15, color=GREY))
 
             input_layer_circles_2.arrange(DOWN, buff=0.15)
             
@@ -24,7 +27,7 @@ class BackwardProp(Scene):
         input_layer_circles_3 = VGroup()
 
         for _ in range(8):
-            input_layer_circles_3.add(Circle(radius=0.15, color=WHITE))
+            input_layer_circles_3.add(Circle(radius=0.15, color=GREY))
 
             input_layer_circles_3.arrange(DOWN, buff=0.15)
         
@@ -34,7 +37,7 @@ class BackwardProp(Scene):
         input_layer_circles_4 = VGroup()
 
         for _ in range(4):
-            input_layer_circles_4.add(Circle(radius=0.15, color=WHITE))
+            input_layer_circles_4.add(Circle(radius=0.15, color=GREY))
 
             input_layer_circles_4.arrange(DOWN, buff=0.15)
         self.add(input_layer_circles_4.shift(RIGHT*2))
@@ -43,29 +46,13 @@ class BackwardProp(Scene):
         input_layer_circles_5 = VGroup()
 
         for _ in range(2):
-            input_layer_circles_5.add(Circle(radius=0.15, color=WHITE))
+            input_layer_circles_5.add(Circle(radius=0.15, color=GREY))
 
             input_layer_circles_5.arrange(DOWN, buff=0.15)
             
         self.add(input_layer_circles_5.shift(RIGHT*4))
 
 
-        
-        # Create input layer circles
-    #     input_layer_circles = VGroup(
-    #         Circle(radius=0.2, color=RED),
-    #         Circle(radius=0.2, color=RED),
-    #         Circle(radius=0.2, color=RED),
-    #         Circle(radius=0.2, color=RED),
-    #         Circle(radius=0.2, color=RED),
-    #         Circle(radius=0.2, color=RED),
-    #         Circle(radius=0.2, color=RED),
-    #         Circle(radius=0.2, color=RED),
-    #         Circle(radius=0.2, color=RED),
-    #         Circle(radius=0.2, color=RED),
-    #         Circle(radius=0.2, color=RED),
-    #         Circle(radius=0.2, color=RED),
-    #     ).arrange(DOWN, buff=0.2)
         
 
     # # Create input layer title
