@@ -1,5 +1,5 @@
 from manim import * 
-
+import random
 class CreateCircle(Scene):
     def construct(self):
         # Create input layer circles
@@ -50,7 +50,7 @@ class CreateCircle(Scene):
         # Create connections between input and hidden layers
         connections = VGroup()
         
-        for input_circle in input_layer_circles[1:]:
+        for input_circle in input_layer_circles:
             
             for hidden_circle in hidden_layer_circles:
                 
@@ -58,7 +58,24 @@ class CreateCircle(Scene):
                                   hidden_circle.get_left(), buff=0, color=GRAY)
                 connections.add(connection)
                 
+        
+        backward_prop_1 = VGroup()
+        for i, hidden_circle in enumerate(hidden_layer_circles):
+            for input_circle in input_layer_circles:
+                colors = [RED, GREEN, BLUE]
+                thicknesses = [1, 1.6, 2.4]
+                color = random.choice(colors)
+                thickness = random.choice(thicknesses)
+                connection_1 = Line(hidden_circle.get_left(),
+                                  input_circle.get_right(),buff=0, color=color,stroke_width=thickness)
+                backward_prop_1.add(connection_1)
+                self.remove((hidden_layer_labels[i]))
+                
+                
              
 
         # Add connections to the scene
         self.play(Create(connections), run_time=2)
+        self.play(Create(backward_prop_1), run_time=2)
+        
+        
