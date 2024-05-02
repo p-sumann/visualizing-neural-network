@@ -57,7 +57,7 @@ class BackwardProp(Scene):
         input_layer_circles_4.arrange(DOWN, buff=0.15)
         self.add(input_layer_circles_4.shift(RIGHT*2))
         
-        label_4 = Text("Hidden Layer", font_size=20,color=BLACK).next_to(input_layer_circles_4, UP*.4).shift(RIGHT*.75)
+        label_4 = Text("Hidden Layer", font_size=20,color=BLACK).next_to(input_layer_circles_4, UP*.6)
         # self.add(input_layer_circles_3.shift(LEFT*2))
         self.add(label_4)
         
@@ -67,11 +67,10 @@ class BackwardProp(Scene):
         for _ in range(2):
             input_layer_circles_5.add(Circle(radius=0.15, color=GREY))
 
-            input_layer_circles_5.arrange(DOWN, buff=0.15)
-            
-        self.add(input_layer_circles_5.shift(RIGHT*2))
+        input_layer_circles_5.arrange(DOWN, buff=0.15)            
+        self.add(input_layer_circles_5.shift(RIGHT*4))
         
-        outout_layer = Text("Output Layer", font_size=20,color=BLACK).next_to(input_layer_circles_5, UP*.4).shift(RIGHT*2)
+        outout_layer = Text("Output Layer", font_size=20,color=BLACK).next_to(input_layer_circles_5, UP*.5)
         # self.add(input_layer_circles_3.shift(LEFT*2))
         self.add(outout_layer)
 
@@ -175,14 +174,16 @@ class BackwardProp(Scene):
                 backward_prop_4.add(connection_1)
 
         
-        self.play(Create(connections_1),run_time=2)
-        self.play(Create(connections_2),run_time=2)
-        self.play(Create(connections_3),run_time=2)
-        self.play(Create(connections_4),run_time=1)
-        self.play(Create(backward_prop_1),run_time=0.5)
-        self.play(Create(backward_prop_2),run_time=0.5)
+        self.play(Create(connections_1),run_time=1.5)
+        self.play(Create(connections_2),run_time=1.5)
+        self.play(Create(connections_3),run_time=1.5)
+        self.play(Create(connections_4),run_time=1.5)
+        self.wait(0.5)
+        self.play(Create(backward_prop_1),run_time=1)
+        self.play(Create(backward_prop_2),run_time=1)
         self.play(Create(backward_prop_3),run_time=1)
         self.play(Create(backward_prop_4),run_time=1)
+        self.wait(1)
         self.play(Create(connections_1),run_time=0.5)
         self.play(Create(connections_2),run_time=0.5)
         self.play(Create(connections_3),run_time=0.5)
