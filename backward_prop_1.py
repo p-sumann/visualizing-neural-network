@@ -7,26 +7,38 @@ class BackwardProp(Scene):
     def construct(self):
         input_layer_circles_1 = VGroup()
 
-        for _ in range(16):
+        for _ in range(8):
             input_layer_circles_1.add(Circle(radius=0.15, color=GREY))
 
-            input_layer_circles_1.arrange(DOWN, buff=0.15)
-            
+        input_layer_circles_1.arrange(DOWN, buff=0.15)
+        
         self.add(input_layer_circles_1.shift(LEFT*4))
+        # Add vertical dots to the left of the first VGroup
+        vdots = VGroup()
+        for i in range(3):
+            vdot = Dot(point=input_layer_circles_1[4].get_left() + LEFT*0.5 + DOWN*i*0.2, radius=0.05, color=BLACK)
+            vdots.add(vdot)
+        # Add a brace to the left of the first VGroup
+        brace = Brace(input_layer_circles_1, direction=LEFT*7, color=BLACK)
+        self.add(brace)
+        text = Text("Input Features (n)", color=BLACK, font_size=20).shift(LEFT*5.75)
+        self.add(text)
         
         input_layer_circles_2 = VGroup()
 
-        for _ in range(12):
+        for _ in range(16):
             input_layer_circles_2.add(Circle(radius=0.15, color=GREY))
 
-            input_layer_circles_2.arrange(DOWN, buff=0.15)
-            
+        input_layer_circles_2.arrange(DOWN, buff=0.15)
+        
+        label = Text("Hidden Layer", font_size=20,color=BLACK).next_to(input_layer_circles_2, UP*.4).shift(LEFT*2)
         self.add(input_layer_circles_2.shift(LEFT*2))
+        self.add(label)
         
             
         input_layer_circles_3 = VGroup()
 
-        for _ in range(8):
+        for _ in range(12):
             input_layer_circles_3.add(Circle(radius=0.15, color=GREY))
 
             input_layer_circles_3.arrange(DOWN, buff=0.15)
@@ -36,7 +48,7 @@ class BackwardProp(Scene):
             
         input_layer_circles_4 = VGroup()
 
-        for _ in range(4):
+        for _ in range(6):
             input_layer_circles_4.add(Circle(radius=0.15, color=GREY))
 
             input_layer_circles_4.arrange(DOWN, buff=0.15)
@@ -94,7 +106,7 @@ class BackwardProp(Scene):
                             buff=0, color=GRAY,
                             stroke_width=thickness)
                 if i == 2:
-                    text = Text(f"{round(random.random(),2)}", font_size=20).move_to(
+                    text = Text(f"{round(random.random(),2)}", font_size=6, color=BLACK).move_to(
                         hidden_circle.get_center())
                     connections_1.add(text)
 
@@ -194,6 +206,10 @@ class BackwardProp(Scene):
         self.play(Create(backward_prop_2),run_time=0.5)
         self.play(Create(backward_prop_3),run_time=1)
         self.play(Create(backward_prop_4),run_time=1)
+        self.play(Create(connections_1),run_time=0.5)
+        self.play(Create(connections_2),run_time=0.5)
+        self.play(Create(connections_3),run_time=0.5)
+        self.play(Create(connections_4),run_time=0.5)
         
         self.wait()
         # self.play(Create(connections_5),run_time=5)
