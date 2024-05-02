@@ -156,14 +156,34 @@ class BackwardProp(Scene):
         for i, hidden_circle in enumerate(input_layer_circles_4):
             for input_circle in input_layer_circles_3:
                 colors = [RED, GREEN, BLUE, ORANGE]
-                thicknesses = [1, 1.2, 1.4 0.7]
+                thicknesses = [1, 1.2, 1.4, 0.7]
                 color = random.choice(colors)
                 thickness = random.choice(thicknesses)
                 connection_1 = Line(hidden_circle.get_left(),
                                   input_circle.get_right(),buff=0, color=color,stroke_width=thickness)
                 backward_prop_2.add(connection_1)
+
+        backward_prop_3 = VGroup()
+        for i, hidden_circle in enumerate(input_layer_circles_3):
+            for input_circle in input_layer_circles_2:
+                colors = [RED, GREEN, BLUE, ORANGE]
+                thicknesses = [1, 1.2, 1.4, 0.7]
+                color = random.choice(colors)
+                thickness = random.choice(thicknesses)
+                connection_1 = Line(hidden_circle.get_left(),
+                                  input_circle.get_right(),buff=0, color=color,stroke_width=thickness)
+                backward_prop_3.add(connection_1)
                 
-                
+        backward_prop_4 = VGroup()
+        for i, hidden_circle in enumerate(input_layer_circles_2):
+            for input_circle in input_layer_circles_1:
+                colors = [RED, GREEN, BLUE, ORANGE]
+                thicknesses = [1, 1.2, 1.4, 0.7]
+                color = random.choice(colors)
+                thickness = random.choice(thicknesses)
+                connection_1 = Line(hidden_circle.get_left(),
+                                  input_circle.get_right(),buff=0, color=color,stroke_width=thickness)
+                backward_prop_4.add(connection_1)
 
         
         self.play(Create(connections_1),run_time=2)
