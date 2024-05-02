@@ -105,11 +105,7 @@ class BackwardProp(Scene):
                 line = Line(input_circle.get_right(), hidden_circle.get_left(),
                             buff=0, color=GRAY,
                             stroke_width=thickness)
-                if i == 2:
-                    text = Text(f"{round(random.random(),2)}", font_size=6, color=BLACK).move_to(
-                        hidden_circle.get_center())
-                    connections_1.add(text)
-
+                
                 connections_1.add(line)
         
         connections_2 = VGroup()
