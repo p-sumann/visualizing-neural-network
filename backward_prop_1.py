@@ -41,18 +41,25 @@ class BackwardProp(Scene):
         for _ in range(12):
             input_layer_circles_3.add(Circle(radius=0.15, color=GREY))
 
-            input_layer_circles_3.arrange(DOWN, buff=0.15)
+        input_layer_circles_3.arrange(DOWN, buff=0.15)
         
         self.add(input_layer_circles_3)
         
+        label = Text("Hidden Layer", font_size=20,color=BLACK).next_to(input_layer_circles_3, UP*.4)
+        # self.add(input_layer_circles_3.shift(LEFT*2))
+        self.add(label)
             
         input_layer_circles_4 = VGroup()
 
         for _ in range(6):
             input_layer_circles_4.add(Circle(radius=0.15, color=GREY))
 
-            input_layer_circles_4.arrange(DOWN, buff=0.15)
+        input_layer_circles_4.arrange(DOWN, buff=0.15)
         self.add(input_layer_circles_4.shift(RIGHT*2))
+        
+        label_4 = Text("Hidden Layer", font_size=20,color=BLACK).next_to(input_layer_circles_4, UP*.4).shift(RIGHT*.75)
+        # self.add(input_layer_circles_3.shift(LEFT*2))
+        self.add(label_4)
         
         
         input_layer_circles_5 = VGroup()
@@ -62,39 +69,13 @@ class BackwardProp(Scene):
 
             input_layer_circles_5.arrange(DOWN, buff=0.15)
             
-        self.add(input_layer_circles_5.shift(RIGHT*4))
-
-
-
-        # Create hidden layer title
-        # hidden_title = Text("Hidden Layer", font_size=20).move_to(
-        #     UP * 3).shift(RIGHT * 2)
-
-        # # Add hidden layer elements to the scene
-        # # self.add(hidden_layer_circles, hidden_layer_labels, hidden_title)
-        # self.add(hidden_layer_circles, hidden_title)
-
-        # Create connections between input and hidden layers
-        # connections = VGroup()
+        self.add(input_layer_circles_5.shift(RIGHT*2))
         
-        # for input_circle in input_layer_circles:
-            
-        #     for hidden_circle in hidden_layer_circles:
-                
-        #         connection = Line(input_circle.get_right(),
-        #                           hidden_circle.get_left(), buff=0, color=GRAY)
-        #         connections.add(connection)
+        outout_layer = Text("Output Layer", font_size=20,color=BLACK).next_to(input_layer_circles_5, UP*.4).shift(RIGHT*2)
+        # self.add(input_layer_circles_3.shift(LEFT*2))
+        self.add(outout_layer)
 
-        # # Backward prop
-        
-        # connections1 = VGroup()
-        # for hidden_circle in hidden_layer_circles:
-            
-        #     for input_circle in input_layer_circles:
-                
-        #         connection_1 = Line(hidden_circle.get_left(),
-        #                           input_circle.get_right(),buff=0, color=ORANGE)
-        #         connections1.add(connection_1)
+
         connections_1 = VGroup()
         colors = [RED, GREEN, BLUE]
         thicknesses = [1, 1.6, 2.4, 3]
@@ -196,7 +177,7 @@ class BackwardProp(Scene):
         
         self.play(Create(connections_1),run_time=2)
         self.play(Create(connections_2),run_time=2)
-        self.play(Create(connections_3),run_time=3)
+        self.play(Create(connections_3),run_time=2)
         self.play(Create(connections_4),run_time=1)
         self.play(Create(backward_prop_1),run_time=0.5)
         self.play(Create(backward_prop_2),run_time=0.5)
