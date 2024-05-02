@@ -192,6 +192,8 @@ class BackwardProp(Scene):
         self.play(Create(connections_4),run_time=1)
         self.play(Create(backward_prop_1),run_time=0.5)
         self.play(Create(backward_prop_2),run_time=0.5)
+        self.play(Create(backward_prop_3),run_time=1)
+        self.play(Create(backward_prop_4),run_time=1)
         
         self.wait()
         # self.play(Create(connections_5),run_time=5)
