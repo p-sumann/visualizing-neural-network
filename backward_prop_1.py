@@ -3,7 +3,7 @@ import random
 
 config.background_color = WHITE
 
-class BackwardProp(Scene):
+class Backward(Scene):
     def construct(self):
         input_layer_circles_1 = VGroup()
 
@@ -172,22 +172,27 @@ class BackwardProp(Scene):
                 connection_1 = Line(hidden_circle.get_left(),
                                   input_circle.get_right(),buff=0, color=color,stroke_width=thickness)
                 backward_prop_4.add(connection_1)
-
         
-        self.play(Create(connections_1),run_time=1.5)
-        self.play(Create(connections_2),run_time=1.5)
-        self.play(Create(connections_3),run_time=1.5)
+        text = Text("Forward Prop", color=BLACK, font_size=15).shift(UP*3 + RIGHT*4)
+        self.play(Write(text))
+        self.play(Create(connections_1),run_time=1)
+        self.play(Create(connections_2),run_time=1)
+        self.play(Create(connections_3),run_time=1)
         self.play(Create(connections_4),run_time=1.5)
         self.wait(0.5)
-        self.play(Create(backward_prop_1),run_time=1)
-        self.play(Create(backward_prop_2),run_time=1)
-        self.play(Create(backward_prop_3),run_time=1)
-        self.play(Create(backward_prop_4),run_time=1)
-        self.wait(1)
-        self.play(Create(connections_1),run_time=0.5)
-        self.play(Create(connections_2),run_time=0.5)
-        self.play(Create(connections_3),run_time=0.5)
-        self.play(Create(connections_4),run_time=0.5)
+        to_backward_prop = Text("Backward Prop", color=BLACK, font_size=15).next_to(
+            text, aligned_edge=RIGHT).shift(LEFT*1)
+        self.play(Transform(text, to_backward_prop))
+        
+        self.play(Create(backward_prop_1),run_time=1.5)
+        self.play(Create(backward_prop_2),run_time=1.5)
+        self.play(Create(backward_prop_3),run_time=1.5)
+        self.play(Create(backward_prop_4),run_time=1.5)
+        # self.wait(1)
+        # self.play(Create(connections_1),run_time=0.5)
+        # self.play(Create(connections_2),run_time=0.5)
+        # self.play(Create(connections_3),run_time=0.5)
+        # self.play(Create(connections_4),run_time=0.5)
         
         self.wait()
         # self.play(Create(connections_5),run_time=5)

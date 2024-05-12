@@ -1,0 +1,13 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/SumanPaudel/Desktop/visualizing-neural-network/media/videos/backward_prop_1/1080p60/partial_movie_files/Backward/2621265332_635167603_1105435128.mp4'
+file 'file:C:/Users/SumanPaudel/Desktop/visualizing-neural-network/media/videos/backward_prop_1/1080p60/partial_movie_files/Backward/4272032393_1243702459_3112110143.mp4'
+file 'file:C:/Users/SumanPaudel/Desktop/visualizing-neural-network/media/videos/backward_prop_1/1080p60/partial_movie_files/Backward/4272032393_3475096591_3948052457.mp4'
+file 'file:C:/Users/SumanPaudel/Desktop/visualizing-neural-network/media/videos/backward_prop_1/1080p60/partial_movie_files/Backward/4272032393_551895913_3744686641.mp4'
+file 'file:C:/Users/SumanPaudel/Desktop/visualizing-neural-network/media/videos/backward_prop_1/1080p60/partial_movie_files/Backward/4272032393_2183643254_1576537639.mp4'
+file 'file:C:/Users/SumanPaudel/Desktop/visualizing-neural-network/media/videos/backward_prop_1/1080p60/partial_movie_files/Backward/4272032393_774239770_2549662949.mp4'
+file 'file:C:/Users/SumanPaudel/Desktop/visualizing-neural-network/media/videos/backward_prop_1/1080p60/partial_movie_files/Backward/4272032393_852391612_2613807138.mp4'
+file 'file:C:/Users/SumanPaudel/Desktop/visualizing-neural-network/media/videos/backward_prop_1/1080p60/partial_movie_files/Backward/4272032393_383810726_2201372221.mp4'
+file 'file:C:/Users/SumanPaudel/Desktop/visualizing-neural-network/media/videos/backward_prop_1/1080p60/partial_movie_files/Backward/4272032393_3413641145_3198078865.mp4'
+file 'file:C:/Users/SumanPaudel/Desktop/visualizing-neural-network/media/videos/backward_prop_1/1080p60/partial_movie_files/Backward/4272032393_2518187823_3404429187.mp4'
+file 'file:C:/Users/SumanPaudel/Desktop/visualizing-neural-network/media/videos/backward_prop_1/1080p60/partial_movie_files/Backward/4272032393_3564131136_1438524201.mp4'
+file 'file:C:/Users/SumanPaudel/Desktop/visualizing-neural-network/media/videos/backward_prop_1/1080p60/partial_movie_files/Backward/4272032393_4042641242_1588598085.mp4'
