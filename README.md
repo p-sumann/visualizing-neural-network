@@ -28,20 +28,9 @@ This project is a visual representation of the forward and backward propagation 
 ## 🛠️ Technologies Used
 
 - Python
-- NumPy
-- Matplotlib
-- OpenCV
-
-## 🤝 Contributing
-
-Contributions are always welcome! If you have any ideas, suggestions, or bug reports, please feel free to open an issue or submit a pull request.
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
+- Manim CE
 
 ## 🙏 Acknowledgments
 
-- [Numpy Tutorials](https://numpy.org/doc/stable/user/index.html)
-- [Matplotlib Documentation](https://matplotlib.org/stable/index.html)
-- [OpenCV Documentation](https://opencv.org/documentation/)
+- [Manim Tutorials](https://docs.manim.community/en/stable/)
+
