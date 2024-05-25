@@ -13,17 +13,11 @@ This project is a visual representation of the forward and backward propagation 
 
 ### Feed Forward Propagation
 
-<video width="100%" height="auto" controls>
-  <source src="https://github.com/sumanpaudel1997/visualizing-neural-network/blob/main/media/videos/feed_forward/1080p60/FeedForward.mp4?raw=true" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Feed Forward Propagation Video](https://github.com/sumanpaudel1997/visualizing-neural-network/blob/main/media/videos/feed_forward/1080p60/FeedForward.mp4)
 
 ### Backward Propagation
 
-<video width="100%" height="auto" controls>
-  <source src="https://github.com/sumanpaudel1997/visualizing-neural-network/blob/main/media/videos/backward_prop_1/1080p60/BackwardProp.mp4?raw=true" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Backward Propagation Video](https://github.com/sumanpaudel1997/visualizing-neural-network/blob/main/media/videos/backward_prop_1/1080p60/BackwardProp.mp4)
 
 ## 🛠️ Technologies Used
 
