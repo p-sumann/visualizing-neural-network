@@ -9,15 +9,15 @@
 
 This project is a visual representation of the forward and backward propagation in a neural network. It provides a clear and intuitive understanding of how the information flows through the network during training.
 
-## 🎥 Videos
+## 🎥 Animations
 
 ### Feed Forward Propagation
 
-[Feed Forward Propagation Video](https://github.com/sumanpaudel1997/visualizing-neural-network/blob/main/media/videos/feed_forward/1080p60/FeedForward.mp4)
+![Feed Forward Propagation](https://github.com/sumanpaudel1997/visualizing-neural-network/blob/main/media/images/text/FeedForward.gif)
 
 ### Backward Propagation
 
-[Backward Propagation Video](https://github.com/sumanpaudel1997/visualizing-neural-network/blob/main/media/videos/backward_prop_1/1080p60/BackwardProp.mp4)
+![Backward Propagation](https://github.com/sumanpaudel1997/visualizing-neural-network/blob/main/media/images/text/BackwardProp.gif)
 
 ## 🛠️ Technologies Used
 
