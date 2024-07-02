@@ -13,11 +13,11 @@ This project is a visual representation of the forward and backward propagation 
 
 ### Feed Forward Propagation
 
-<img src="https://github.com/sumanpaudel1997/visualizing-neural-network/blob/main/media/images/text/FeedForward.gif" width="800" height="400" />
+<img src="https://github.com/p-sumann/visualizing-neural-network/blob/main/media/images/text/FeedForward.gif" width="800" height="400" />
 
 ### Backward Propagation
 
-<img src="https://github.com/sumanpaudel1997/visualizing-neural-network/blob/main/media/images/text/BackwardProp.gif" width="800" height="400" />
+<img src="https://github.com/p-sumann/visualizing-neural-network/blob/main/media/images/text/BackwardProp.gif" width="800" height="400" />
 
 ## 🛠️ Technologies Used
 
